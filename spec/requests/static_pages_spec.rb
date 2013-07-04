@@ -8,7 +8,6 @@ describe "Static pages" do
     before { visit root_path }
 
     it { page.should have_selector('h1', text: 'Sample App') }
-
     it { should have_selector('title', text: full_title('')) }
     it { should_not have_selector 'title', text: '| Home' }
   end
@@ -31,6 +30,6 @@ describe "Static pages" do
     before { visit contact_path }
 
     it { page.should have_selector('h1', text: 'Contact') }
- it { page.should have_selector('title', text: full_title('Contact')) }
+    it { page.should have_selector('title', text: full_title('Contact')) }
   end
 end
